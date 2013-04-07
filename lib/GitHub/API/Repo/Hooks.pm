@@ -9,7 +9,7 @@
 #
 package GitHub::API::Repo::Hooks;
 {
-  $GitHub::API::Repo::Hooks::VERSION = '0.000000_02';
+  $GitHub::API::Repo::Hooks::VERSION = '0.000000_03';
 }
 
 # ABSTRACT: A list of a repository's hooks
@@ -47,7 +47,7 @@ GitHub::API::Repo::Hooks - A list of a repository's hooks
 
 =head1 VERSION
 
-This document describes version 0.000000_02 of GitHub::API::Repo::Hooks - released March 30, 2013 as part of GitHub-API.
+This document describes version 0.000000_03 of GitHub::API::Repo::Hooks - released April 07, 2013 as part of GitHub-API.
 
 =head1 METHODS
 

@@ -9,7 +9,7 @@
 #
 package GitHub::API::User;
 {
-  $GitHub::API::User::VERSION = '0.000000_02';
+  $GitHub::API::User::VERSION = '0.000000_03';
 }
 
 use common::sense;
@@ -50,7 +50,7 @@ GitHub::API::User - A user
 
 =head1 VERSION
 
-This document describes version 0.000000_02 of GitHub::API::User - released March 30, 2013 as part of GitHub-API.
+This document describes version 0.000000_03 of GitHub::API::User - released April 07, 2013 as part of GitHub-API.
 
 =head1 METHODS
 

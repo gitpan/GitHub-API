@@ -9,7 +9,7 @@
 #
 package GitHub::API::Base;
 {
-  $GitHub::API::Base::VERSION = '0.000000_02';
+  $GitHub::API::Base::VERSION = '0.000000_03';
 }
 
 use common::sense;
@@ -43,7 +43,7 @@ sub _post {
     my $url = $self->{base_url} . $self->{url};
     $url .= $path_part // q{};
 
-    #### POST to: $url
+    ### POST to: $url
     #### $content
     my $resp = $self
         ->{ua}
@@ -51,6 +51,21 @@ sub _post {
         ;
 
     return $resp->{content}->from_json;
+}
+
+sub _delete {
+    my ($self, $content, $path_part) = @_;
+
+    my $url = $self->{base_url} . $self->{url};
+    $url .= $path_part // q{};
+
+    ### DELETE to: $url
+    my $resp = $self
+        ->{ua}
+        ->delete($url, { headers => $self->{headers} })
+        ;
+
+    return $resp;
 }
 
 sub _next_append {
@@ -89,7 +104,7 @@ GitHub::API::Base - Base class for GitHub::API classes
 
 =head1 VERSION
 
-This document describes version 0.000000_02 of GitHub::API::Base - released March 30, 2013 as part of GitHub-API.
+This document describes version 0.000000_03 of GitHub::API::Base - released April 07, 2013 as part of GitHub-API.
 
 =head1 SEE ALSO
 

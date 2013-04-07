@@ -9,7 +9,7 @@
 #
 package GitHub::API::Repo::Keys;
 {
-  $GitHub::API::Repo::Keys::VERSION = '0.000000_02';
+  $GitHub::API::Repo::Keys::VERSION = '0.000000_03';
 }
 
 # ABSTRACT: A list of a repository's hooks
@@ -35,12 +35,20 @@ sub all {
 sub create {
     my ($self, %key) = @_;
 
+    delete $self->{_keys};
     my $key = $self->_post(\%key);
-    $self->{_keys}->push($key)
-        if defined $self->{_keys};
 
     return $key;
 }
+
+
+sub rm {
+    my ($self, $id) = @_;
+
+    delete $self->{_keys};
+    return $self->_delete(undef, "/$id");
+}
+
 
 !!42;
 
@@ -58,7 +66,7 @@ GitHub::API::Repo::Keys - A list of a repository's hooks
 
 =head1 VERSION
 
-This document describes version 0.000000_02 of GitHub::API::Repo::Keys - released March 30, 2013 as part of GitHub-API.
+This document describes version 0.000000_03 of GitHub::API::Repo::Keys - released April 07, 2013 as part of GitHub-API.
 
 =head1 DESCRIPTION
 
@@ -77,6 +85,10 @@ Adds a public key to the repository as a deploy key.
 
 See L<the GitHub API reference|http://developer.github.com/v3/repos/keys/#create>
 for more information.
+
+=head2 rm($id)
+
+Given a key id, deletes said key from the repository's list of deploy keys.
 
 =head1 SEE ALSO
 

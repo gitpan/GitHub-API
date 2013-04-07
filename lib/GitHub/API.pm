@@ -9,7 +9,7 @@
 #
 package GitHub::API;
 {
-  $GitHub::API::VERSION = '0.000000_02';
+  $GitHub::API::VERSION = '0.000000_03';
 }
 
 use common::sense;
@@ -72,7 +72,7 @@ GitHub::API - An itty-bitty interface to the GitHub API
 
 =head1 VERSION
 
-This document describes version 0.000000_02 of GitHub::API - released March 30, 2013 as part of GitHub-API.
+This document describes version 0.000000_03 of GitHub::API - released April 07, 2013 as part of GitHub-API.
 
 =head1 SYNOPSIS
 

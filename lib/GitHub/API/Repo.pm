@@ -9,7 +9,7 @@
 #
 package GitHub::API::Repo;
 {
-  $GitHub::API::Repo::VERSION = '0.000000_02';
+  $GitHub::API::Repo::VERSION = '0.000000_03';
 }
 
 # ABSTRACT: A repository
@@ -40,7 +40,7 @@ GitHub::API::Repo - A repository
 
 =head1 VERSION
 
-This document describes version 0.000000_02 of GitHub::API::Repo - released March 30, 2013 as part of GitHub-API.
+This document describes version 0.000000_03 of GitHub::API::Repo - released April 07, 2013 as part of GitHub-API.
 
 =head1 METHODS
 

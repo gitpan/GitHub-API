@@ -11,6 +11,7 @@ requires "perl" => "5.010";
 on 'test' => sub {
   requires "File::Find" => "0";
   requires "File::Temp" => "0";
+  requires "Test::Fatal" => "0";
   requires "Test::More" => "0.88";
   requires "Test::Requires::Env" => "0";
   requires "autodie" => "0";
